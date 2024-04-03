@@ -38,7 +38,7 @@ class VAENet(nn.Module):
 
         x = self.act(self.initial_decoder(x))
         x = self.act(self.hidden_decoder(x))
-        x = self.act(self.final_decoder(x))
+        x = self.final_decoder(x)
         
         return x, m, gamma
     
